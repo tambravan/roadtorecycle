@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_new_tranc"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageButton
+        android:id="@+id/nextIb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:padding="@dimen/padding_common_20"
+        android:src="@mipmap/forward_icon"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/splash" />
+
+    <LinearLayout
+        android:layout_above="@+id/copyRightTx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_common_10"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="0dp"
+            android:layout_weight=".6"
+            android:layout_height="match_parent"
+            android:background="@color/green_new"
+            android:gravity="center"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:padding="@dimen/padding_common_12"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_common_25" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/copyRightTx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:gravity="center|bottom"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_common_5"
+        android:text="@string/app_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_common_8" />
+
+</RelativeLayout>

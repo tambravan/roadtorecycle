@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="@dimen/padding_common_16"
+    android:background="@color/green_new_tranc">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_enter_your_zip_code"
+        android:textColor="@color/black"
+        android:padding="@dimen/padding_common_5"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_common_18" />
+
+    <EditText
+        android:id="@+id/zipCodeEd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:background="@drawable/ed_border"
+        android:hint="@string/please_enter_zip_code"
+        android:maxLength="5"
+        android:gravity="center"
+        android:inputType="number|textNoSuggestions"
+        android:padding="@dimen/padding_common_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zipCodeEd"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin_common_20"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/enterBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:background="@drawable/rounded_btn"
+            android:gravity="center"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_common_18" />
+
+    </LinearLayout>
+</RelativeLayout>

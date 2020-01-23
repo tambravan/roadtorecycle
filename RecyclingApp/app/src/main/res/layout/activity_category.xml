@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="" />
+
+    <EditText
+        android:id="@+id/searchItemEd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_common_20"
+        android:background="@drawable/ed_border"
+        android:drawableLeft="@mipmap/icon_search"
+        android:drawablePadding="@dimen/padding_common_8"
+        android:focusable="false"
+        android:hint="@string/enter_an_item"
+        android:lines="1"
+        android:padding="@dimen/padding_common_12"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:gravity="center"
+        android:weightSum="1"
+        >
+
+        <View
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="1dp"
+            android:layout_weight=".4"
+            android:background="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/catgoryHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_common_10"
+        android:text="@string/browse_by_category"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_common_18" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_common_10"
+        android:layout_weight=".9"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/productRecyclerViewSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>
